@@ -1,0 +1,6 @@
+[Unit]
+Description=amdgpu-sensors daemon service
+[Service]
+ExecStart=/usr/bin/python3 -B /usr/bin/amdgpu-sensors-daemon.py
+[Install]
+WantedBy=multi-user.target 

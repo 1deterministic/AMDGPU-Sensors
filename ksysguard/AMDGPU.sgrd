@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet locked="0" interval="1" title="AMDGPU" columns="2" rows="4">
+ <host shell="" port="-1" command="/etc/amdgpu-sensors/amdgpu-sensors.pl" name="amdgpu"/>
+ <host shell="" port="-1" command="ksysguardd" name="localhost"/>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="GPU Usage" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="0" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="0" max="100" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="gpu_usage"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="GPU Frequency" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="0" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="1" max="1212" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="gpu_frequency"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="GPU Temperature" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="1" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="0" max="100" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="gpu_temperature"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="GPU Voltage" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="1" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="1" max="1200" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="gpu_voltage"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="GPU Power" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="2" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="0" max="48" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="gpu_power"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="MEM Usage" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="2" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="1" max="2048" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="mem_usage"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="MEM Frequency" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="3" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="0" max="1750" manualRange="1">
+  <beam sensorType="integer" hostName="amdgpu" color="0xffff0000" sensorName="mem_frequency"/>
+ </display>
+ <display hLines="1" class="FancyPlotter" min="0" vScroll="0" title="Fan RPM" stacked="0" autoRange="1" labels="1" columnSpan="1" showUnit="0" unit="" hScale="6" svgBackground="" row="3" fontSize="8" rowSpan="1" version="1" vLines="0" vDistance="30" column="1" max="4600" manualRange="1">
+  <beam sensorType="float" hostName="localhost" color="0xffff0000" sensorName="lmsensors/amdgpu-pci-0100/fan1"/>
+ </display>
+</WorkSheet>
