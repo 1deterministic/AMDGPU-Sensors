@@ -28,6 +28,6 @@ To use the Ksysguard tab you need to install a Perl script that will make the se
 * If the sensors are working fine but you have a different card, you may want to change the chart scales in Ksysguard, as the tab file is calibrated to my card (right click the chart -> scaling -> specify graph interval).
 * The Ksysguard tab includes an extra sensor for Fan RPM. I added it mostly to cover the empty chart that would otherwise be annoying, but it is useful anyway.
 
-* I'm using a RX 460 2GB and running Arch Linux.
+* I'm using a RX 460 2GB and running Arch Linux, but it seems to be working fine on Kubuntu 19.04 and Manjaro KDE too.
 
 ## [1deterministic](https://github.com/1deterministic), 2019
