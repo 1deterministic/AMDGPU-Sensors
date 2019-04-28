@@ -19,10 +19,10 @@ The daemon is a systemd service that will read sensor info from read-protected f
 # The monitor
 Once the daemon is installed and running, open a terminal in the project folder and run the monitor script with Python 3 (`python3 amdgpu-sensors-monitor.py`), it will show all sensors, updating each second. Use CTRL+C to stop the execution.
 
-## The Ksysguard tab
+# The Ksysguard tab
 To use the Ksysguard tab you need to install a Perl script that will make the sensors available inside Ksysguard, alongside all other sensors of the system, and the tab file itself, that will use those sensors to display the charts. First, open a terminal in `ksysguard`, in the project root, and install the script using the install script (`install.sh`). This will copy the script `amdgpu-sensors.pl` to the `/etc` folder. Then, just open Ksysguard, click `File` -> `Import tab from file` -> select `AMDGPU.sgrd` inside the same folder.
 
-## Important notes
+# Important notes
 * I don't have access to different AMD cards to test it so some sensors can go wrong.
 * Your distro may do things different than the one I'm using at the moment.
 * If the sensors are working fine but you have a different card, you may want to change the chart scales in Ksysguard, as the tab file is calibrated to my card (right click the chart -> scaling -> specify graph interval).
