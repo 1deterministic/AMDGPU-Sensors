@@ -8,6 +8,7 @@ import os
 import time
 
 if __name__ == "__main__":
+    # stop if not running as root
     if os.geteuid() != 0:
         exit("Error: need root privileges")
         
@@ -59,7 +60,9 @@ if __name__ == "__main__":
             # sleep
             time.sleep(sleep_secs)
     
+    # smooth exiting with CTRL+C
     except(KeyboardInterrupt):
         exit("")
+    # all other cases
     except:
         exit()

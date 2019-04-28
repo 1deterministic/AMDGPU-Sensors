@@ -33,6 +33,7 @@ if __name__ == "__main__":
             gpu_usage = open(os.path.join(root, "gpu_usage"), "r").read()
             mem_usage = open(os.path.join(root, "mem_usage"), "r").read()
             
+            # shows all info on the terminal
             print("mem_frequency:", mem_frequency, "MHz")
             print("gpu_frequency:", gpu_frequency, "MHz")
             print("gpu_voltage:", gpu_voltage, "mV")
@@ -44,13 +45,17 @@ if __name__ == "__main__":
             # sleep
             time.sleep(sleep_secs)
             
+            # erases 7 lines upwards
             for i in range(0, 7):
                 sys.stdout.write('\x1b[1A')
                 sys.stdout.write('\x1b[2K')
-                
+
+    # smooth exiting with CTRL+C            
     except(KeyboardInterrupt):
         exit("")
+    # message displayed when a file is not found, possibly the daemon isn't running
     except(FileNotFoundError):
         exit("File not found: are you sure amdgpu-sensors-daemon.py is running?")
+    # all other cases
     except():
         exit()
