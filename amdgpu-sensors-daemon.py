@@ -36,7 +36,6 @@ if __name__ == "__main__":
         while (True):
             # reads files
             amdgpu_pm_info = open("/sys/kernel/debug/dri/0/amdgpu_pm_info", "r").readlines()
-            
             amdgpu_vram_mm = open("/sys/kernel/debug/dri/0/amdgpu_vram_mm", "r").readlines()
             
             # gets the actual numbers
@@ -49,13 +48,13 @@ if __name__ == "__main__":
             mem_usage = amdgpu_vram_mm[-1].split("ram usage:")[1].split("MB, vis usage:")[0]
             
             # writes those numbers to the files that will act as sensors
-            open(root + "/mem_frequency", "w").write(mem_frequency)
-            open(root + "/gpu_frequency", "w").write(gpu_frequency)
-            open(root + "/gpu_voltage", "w").write(gpu_voltage)
-            open(root + "/gpu_power", "w").write(gpu_power)
-            open(root + "/gpu_temperature", "w").write(gpu_temperature)
-            open(root + "/gpu_usage", "w").write(gpu_usage)
-            open(root + "/mem_usage", "w").write(mem_usage)
+            open(os.path.join(root, "mem_frequency"), "w").write(mem_frequency)
+            open(os.path.join(root, "gpu_frequency"), "w").write(gpu_frequency)
+            open(os.path.join(root, "gpu_voltage"), "w").write(gpu_voltage)
+            open(os.path.join(root, "gpu_power"), "w").write(gpu_power)
+            open(os.path.join(root, "gpu_temperature"), "w").write(gpu_temperature)
+            open(os.path.join(root, "gpu_usage"), "w").write(gpu_usage)
+            open(os.path.join(root, "mem_usage"), "w").write(mem_usage)
             
             # sleep
             time.sleep(sleep_secs)

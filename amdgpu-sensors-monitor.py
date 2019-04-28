@@ -25,13 +25,13 @@ if __name__ == "__main__":
     try:
         while (True):
             # reads data from the sensor files
-            mem_frequency = open(root + "/mem_frequency", "r").read()
-            gpu_frequency = open(root + "/gpu_frequency", "r").read()
-            gpu_voltage = open(root + "/gpu_voltage", "r").read()
-            gpu_power = open(root + "/gpu_power", "r").read()
-            gpu_temperature = open(root + "/gpu_temperature", "r").read()
-            gpu_usage = open(root + "/gpu_usage", "r").read()
-            mem_usage = open(root + "/mem_usage", "r").read()
+            mem_frequency = open(os.path.join(root, "mem_frequency"), "r").read()
+            gpu_frequency = open(os.path.join(root, "gpu_frequency"), "r").read()
+            gpu_voltage = open(os.path.join(root, "gpu_voltage"), "r").read()
+            gpu_power = open(os.path.join(root, "gpu_power"), "r").read()
+            gpu_temperature = open(os.path.join(root, "gpu_temperature"), "r").read()
+            gpu_usage = open(os.path.join(root, "gpu_usage"), "r").read()
+            mem_usage = open(os.path.join(root, "mem_usage"), "r").read()
             
             print("mem_frequency:", mem_frequency, "MHz")
             print("gpu_frequency:", gpu_frequency, "MHz")
